@@ -31,13 +31,14 @@
     <swiper-item wx:for="{{expertListi}}" wx:for-index="i" wx:for-item="items">
 			<scroll-view scroll-with-animation="true" scroll-y="true" class="scoll-h" bindscrolltolower="scrolltolowerLoadData">
 				<block wx:if="{{currentTab == 0}}">
-          <text text-data='{{textData}}'></text>
+          <!-- <text text-data='{{textData}}'></text> -->
         </block>
         <view class="nodata" wx:if='{{nodata}}'>加载数据中...</view>
-				<view wx:else class="juzi-list {{currentTab == 0  ? '' : 'mt40'}}">
+				<view wx:else class="juzi-list mt40">
 					<block wx:for="{{contentArray}}" wx:for-index="i" wx:for-item="item">
 						<view class="juzi-item">
 							<navigator class="top" url="../detail/detail?id={{item.id}}&classid={{item.classid}}">
+								<image src="{{item.icon}}" mode="aspectFit"></image>
 								<view class='t'>{{item.title}}</view>
 							</navigator>
 							<view class="bottom">

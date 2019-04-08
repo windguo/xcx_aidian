@@ -49,7 +49,7 @@ Page({
 		console.log("姓名：" + this.data.username + "密码：" + this.data.password);
 		//return false;
 		wx.request({
-			url: 'https://www.yishuzi.com.cn/juzi_xiaochengxu_api/bind.php',
+			url: 'https://www.yishuzi.com.cn/shop_xiaochengxu_api/bind.php',
 			header: { 'content-type': 'application/x-www-form-urlencoded' },
 			method: 'POST',
 			dataType: 'json',
@@ -88,7 +88,7 @@ Page({
 				} else {
 					let _usernames = this.data.username + '_' + parseInt(Math.random() * 99999);
 					wx.request({
-						url: 'https://www.yishuzi.com.cn/juzi_xiaochengxu_api/register.php',
+						url: 'https://www.yishuzi.com.cn/shop_xiaochengxu_api/register.php',
 						header: { 'content-type': 'application/x-www-form-urlencoded' },
 						method: 'POST',
 						dataType: 'json',

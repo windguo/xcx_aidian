@@ -31,7 +31,7 @@ Page({
 			usernames: wx.getStorageSync('storageLoginedUsernames')
 		});
 		wx.request({
-			url: 'https://www.yishuzi.com.cn/juzi_xiaochengxu_api/?getJson=class&classid=7&publish=1',
+			url: 'https://www.yishuzi.com.cn/shop_xiaochengxu_api/?getJson=class&classid=7&publish=1',
 			header: { 'content-type': 'application/x-www-form-urlencoded' },
 			method: 'GET',
 			dataType: 'json',
@@ -81,7 +81,7 @@ Page({
 				addnews: '提交'
 			});
 			wx.request({
-				url: 'https://www.yishuzi.com.cn/juzi_xiaochengxu_api/publish.php',
+				url: 'https://www.yishuzi.com.cn/shop_xiaochengxu_api/publish.php',
 				data: {
 					sessionkey: this.data.sessionkey,
 					smalltext: e.detail.value.smalltext.trim(),

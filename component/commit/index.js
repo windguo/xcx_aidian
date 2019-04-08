@@ -52,7 +52,7 @@ Component({
 			classid: e.detail.value.classid
         });
         wx.request({
-          	url: 'https://www.yishuzi.com.cn/juzi_xiaochengxu_api/commit.php',
+          	url: 'https://www.yishuzi.com.cn/shop_xiaochengxu_api/commit.php',
 			data: {
 				sessionkey: wx.getStorageSync('storageSessionkey'),
 				saytext: e.detail.value.saytext.trim(),
@@ -99,9 +99,9 @@ Component({
     },
 		_getList:function(){
 			let that = this;
-			console.log('https://www.yishuzi.com.cn/juzi_xiaochengxu_api/?getJson=getCommitList&id=' + this.data.id + '&page=' + this.data.page);
+			console.log('https://www.yishuzi.com.cn/shop_xiaochengxu_api/?getJson=getCommitList&id=' + this.data.id + '&page=' + this.data.page);
 			wx.request({
-				url: 'https://www.yishuzi.com.cn/juzi_xiaochengxu_api/?getJson=getCommitList&id=' + this.data.id + '&page=' + this.data.page,
+				url: 'https://www.yishuzi.com.cn/shop_xiaochengxu_api/?getJson=getCommitList&id=' + this.data.id + '&page=' + this.data.page,
 				method: 'GET',
 				dataType: 'json',
 				success: (json) => {

@@ -51,10 +51,10 @@ Page({
 		this.getFavas();
 	},
 	getFavas:function(){
-		console.log('https://www.yishuzi.com.cn/juzi_xiaochengxu_api/?getJson=myfavas&userid=' + this.data.userid);
+		console.log('https://www.yishuzi.com.cn/shop_xiaochengxu_api/?getJson=myfavas&userid=' + this.data.userid);
 		let that = this;
 		wx.request({
-			url: 'https://www.yishuzi.com.cn/juzi_xiaochengxu_api/?getJson=myfavas&userid=' + this.data.userid,
+			url: 'https://www.yishuzi.com.cn/shop_xiaochengxu_api/?getJson=myfavas&userid=' + this.data.userid,
 			method: 'GET',
 			dataType: 'json',
 			success: (json) => {
@@ -80,9 +80,9 @@ Page({
 		this.setData({
 			page: that.data.page + 1
 		});
-		console.log('https://www.yishuzi.com.cn/juzi_xiaochengxu_api/?getJson=myfavas&userid=' + this.data.userid + '&page=' + that.data.page);
+		console.log('https://www.yishuzi.com.cn/shop_xiaochengxu_api/?getJson=myfavas&userid=' + this.data.userid + '&page=' + that.data.page);
 		wx.request({
-			url: 'https://www.yishuzi.com.cn/juzi_xiaochengxu_api/?getJson=myfavas&userid=' + this.data.userid + '&page=' + that.data.page,
+			url: 'https://www.yishuzi.com.cn/shop_xiaochengxu_api/?getJson=myfavas&userid=' + this.data.userid + '&page=' + that.data.page,
 			method: 'GET',
 			dataType: 'json',
 			success: (json) => {

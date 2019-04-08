@@ -5,7 +5,7 @@ var app = getApp()
 Page({
   onShareAppMessage: function (res) {
 		return {
-			title: '各类经典最新店每日更新...',
+			title: '爱小程序商店欢迎您...',
 			imageUrl:'/images/indexPic.jpg',
 			path: '/pages/index/index',
 			success: (res) => {
@@ -36,7 +36,7 @@ Page({
 		CustomBar: app.globalData.CustomBar,
     titleTop: app.globalData.StatusBar,
     index: null,
-		hidden: false,
+		hidden: true,
     winHeight: '', // 窗口高度
     currentTab: 0, // 预设当前项的值
     scrollLeft: 0, // tab标题的滚动条位置

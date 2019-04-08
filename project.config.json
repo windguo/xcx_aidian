@@ -55,7 +55,7 @@
 					"id": 2,
 					"name": "详情页",
 					"pathName": "pages/detail/detail",
-					"query": "id=1183&classid=8",
+					"query": "id=1&classid=26",
 					"scene": null
 				},
 				{

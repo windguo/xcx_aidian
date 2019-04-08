@@ -73,7 +73,7 @@ Page({
 	getListData: function (classid, page) {
 		let that = this;
 		wx.request({
-			url: 'https://www.yishuzi.com.cn/juzi_xiaochengxu_api/?getJson=myPublish&username=' + classid,
+			url: 'https://www.yishuzi.com.cn/shop_xiaochengxu_api/?getJson=myPublish&username=' + classid,
 			method: 'GET',
 			dataType: 'json',
 			success: (json) => {
@@ -100,7 +100,7 @@ Page({
 	getReview:function(){
 		let that = this;
 		wx.request({
-			url: 'https://www.yishuzi.com.cn/juzi_xiaochengxu_api/?getJson=myPublish_review&username=' + this.data.usernames,
+			url: 'https://www.yishuzi.com.cn/shop_xiaochengxu_api/?getJson=myPublish_review&username=' + this.data.usernames,
 			method: 'GET',
 			dataType: 'json',
 			success: (json) => {
@@ -149,7 +149,7 @@ Page({
 			page: that.data.page + 1
 		})
 		wx.request({
-			url: 'https://www.yishuzi.com.cn/juzi_xiaochengxu_api/?getJson=myPublish&username=' + this.data.usernames + '&page=' + that.data.page,
+			url: 'https://www.yishuzi.com.cn/shop_xiaochengxu_api/?getJson=myPublish&username=' + this.data.usernames + '&page=' + that.data.page,
 			method: 'GET',
 			dataType: 'json',
 			success: (json) => {

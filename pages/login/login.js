@@ -52,7 +52,7 @@ Page({
 							});
 							//发起网络请求
 							wx.request({
-								url: 'https://www.yishuzi.com.cn/juzi_xiaochengxu_api/login.php',
+								url: 'https://www.yishuzi.com.cn/shop_xiaochengxu_api/login.php',
 								data: {
 									code: res.code
 								},

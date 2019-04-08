@@ -25,7 +25,7 @@ Page({
 		});
 		let that = this;
 		wx.request({
-			url: 'https://www.yishuzi.com.cn/juzi_xiaochengxu_api/?getJson=keyword',
+			url: 'https://www.yishuzi.com.cn/shop_xiaochengxu_api/?getJson=keyword',
 			header: { 'content-type': 'application/x-www-form-urlencoded' },
 			method: 'GET',
 			dataType: 'json',
@@ -71,9 +71,9 @@ Page({
 			keyword: e.detail.value.keyword
 		});
 		let that = this;
-		console.log('https://www.yishuzi.com.cn/juzi_xiaochengxu_api/?getJson=search&key=' + e.detail.value.keyword + '&page=' + this.data.page);
+		console.log('https://www.yishuzi.com.cn/shop_xiaochengxu_api/?getJson=search&key=' + e.detail.value.keyword + '&page=' + this.data.page);
 		wx.request({
-			url: 'https://www.yishuzi.com.cn/juzi_xiaochengxu_api/?getJson=search&key=' + e.detail.value.keyword + '&page=' + this.data.page,
+			url: 'https://www.yishuzi.com.cn/shop_xiaochengxu_api/?getJson=search&key=' + e.detail.value.keyword + '&page=' + this.data.page,
 			header: { 'content-type': 'application/x-www-form-urlencoded' },
 			method: 'GET',
 			dataType: 'json',
@@ -131,7 +131,7 @@ Page({
 		}
 		if (this.data.keywordsArrayFlag){
 			wx.request({
-				url: 'https://www.yishuzi.com.cn/juzi_xiaochengxu_api/?getJson=keyword',
+				url: 'https://www.yishuzi.com.cn/shop_xiaochengxu_api/?getJson=keyword',
 				header: { 'content-type': 'application/x-www-form-urlencoded' },
 				method: 'GET',
 				dataType: 'json',
@@ -153,7 +153,7 @@ Page({
 			});
 		}else{
 			wx.request({
-				url: 'https://www.yishuzi.com.cn/juzi_xiaochengxu_api/?getJson=search&key=' + this.data.keyword + '&page=' + this.data.page,
+				url: 'https://www.yishuzi.com.cn/shop_xiaochengxu_api/?getJson=search&key=' + this.data.keyword + '&page=' + this.data.page,
 				header: { 'content-type': 'application/x-www-form-urlencoded' },
 				method: 'GET',
 				dataType: 'json',
@@ -191,7 +191,7 @@ Page({
 			page: that.data.page + 1
 		})
 		wx.request({
-			url: 'https://www.yishuzi.com.cn/juzi_xiaochengxu_api/?getJson=search&key=' + this.data.keyword + '&page=' + that.data.page,
+			url: 'https://www.yishuzi.com.cn/shop_xiaochengxu_api/?getJson=search&key=' + this.data.keyword + '&page=' + that.data.page,
 			method: 'GET',
 			dataType: 'json',
 			success: (json) => {

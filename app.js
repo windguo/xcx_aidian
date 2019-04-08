@@ -13,7 +13,7 @@ App({
 		});
 	},
   globalData:{
-    apiUrl:'https://www.yishuzi.com.cn/juzi_xiaochengxu_api',
+    apiUrl:'https://www.yishuzi.com.cn/shop_xiaochengxu_api',
     token:null,
     rnd: '',
     username: '',

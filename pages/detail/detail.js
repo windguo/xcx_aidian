@@ -1,7 +1,5 @@
 // latest.js
 var COMMONFN = require('../../utils/util.js');
-var WxParse = require('../../wxParse/wxParse.js')
-
 var app = getApp()
 Page({
   onShareAppMessage: function (res) {
@@ -41,7 +39,7 @@ Page({
   },
   data: {
 		navbarData: {
-			title: "爱句子详情页",
+			title: "爱店详情页",
 			showCapsule: true,
 			home: true,
 			back: true
@@ -54,7 +52,7 @@ Page({
     winHeight: '', // 窗口高度
     currentTab: 0, // 预设当前项的值
     scrollLeft: 0, // tab标题的滚动条位置
-    expertListi: [],
+    detailData: [],
     expertList: [],
     expertListId: [],
     _windowWidth: wx.getSystemInfoSync().windowWidth,
@@ -95,16 +93,9 @@ Page({
       dataType: 'json',
       success: (json) => {
         console.log('detail---', json.data)
-        var that = this
-        WxParse.wxParse('article', 'html', json.data.result['smalltext'], that, 5)
+        var that = this;
         this.setData({
-          title: json.data.result['title'],
-          smalltext: json.data.result['smalltext'],
-					onclick: json.data.result['onclick'],
-					newstime: json.data.result['newstime'],
-          diggtop: json.data.result['diggtop'],
-          id: this.data.id,
-          username:json.data.result['username'],
+          detailData:json.data.result,
           commitData: {
             id: this.data.id,
             classid:this.data.classid
@@ -161,7 +152,7 @@ Page({
 				classid: e.detail.value.classid
 			});
 			wx.request({
-				url: 'https://www.yishuzi.com.cn/juzi_xiaochengxu_api/commit.php',
+				url: 'https://www.yishuzi.com.cn/shop_xiaochengxu_api/commit.php',
 				data: {
 					sessionkey: wx.getStorageSync('storageSessionkey'),
 					saytext: e.detail.value.saytext.trim(),
@@ -208,9 +199,9 @@ Page({
 	},
 	_getList: function () {
 		let that = this;
-		console.log('https://www.yishuzi.com.cn/juzi_xiaochengxu_api/?getJson=getCommitList&id=' + this.data.id + '&page=' + this.data.page);
+		console.log('https://www.yishuzi.com.cn/shop_xiaochengxu_api/?getJson=getCommitList&id=' + this.data.id + '&page=' + this.data.page);
 		wx.request({
-			url: 'https://www.yishuzi.com.cn/juzi_xiaochengxu_api/?getJson=getCommitList&id=' + this.data.id + '&page=' + this.data.page,
+			url: 'https://www.yishuzi.com.cn/shop_xiaochengxu_api/?getJson=getCommitList&id=' + this.data.id + '&page=' + this.data.page,
 			method: 'GET',
 			dataType: 'json',
 			success: (json) => {
@@ -226,7 +217,7 @@ Page({
 	check_fava_article: function () {
 		let that = this;
 		wx.request({
-			url: 'https://www.yishuzi.com.cn/juzi_xiaochengxu_api/?getJson=check_fava_article&id=' + this.data.id + '&classid=' + this.data.classid + '&userid=' + this.data.userid,
+			url: 'https://www.yishuzi.com.cn/shop_xiaochengxu_api/?getJson=check_fava_article&id=' + this.data.id + '&classid=' + this.data.classid + '&userid=' + this.data.userid,
 			method: 'GET',
 			dataType: 'json',
 			success: (json) => {
@@ -253,9 +244,9 @@ Page({
 		})
 		let _this = this;
 		console.log('eeee-', e);
-		console.log('https://www.yishuzi.com.cn/juzi_xiaochengxu_api_root/e/public/digg/index.php?afrom=xiaochengxu&dotop=1&doajax=1&ajaxarea=diggnum&id=' + this.data.id + '&classid=' + this.data.classid);
+		console.log('https://www.yishuzi.com.cn/shop_xiaochengxu_api_root/e/public/digg/index.php?afrom=xiaochengxu&dotop=1&doajax=1&ajaxarea=diggnum&id=' + this.data.id + '&classid=' + this.data.classid);
 		wx.request({
-			url: 'https://www.yishuzi.com.cn/juzi_xiaochengxu_api_root/e/public/digg/index.php?afrom=xiaochengxu&dotop=1&doajax=1&ajaxarea=diggnum&id=' + this.data.id + '&classid=' + this.data.classid,
+			url: 'https://www.yishuzi.com.cn/shop_xiaochengxu_api_root/e/public/digg/index.php?afrom=xiaochengxu&dotop=1&doajax=1&ajaxarea=diggnum&id=' + this.data.id + '&classid=' + this.data.classid,
 			method: 'GET',
 			dataType: 'json',
 			success: (json) => {
@@ -279,7 +270,7 @@ Page({
 		})
 		let _this = this;
 		wx.request({
-			url: 'https://www.yishuzi.com.cn/juzi_xiaochengxu_api/fava.php',
+			url: 'https://www.yishuzi.com.cn/shop_xiaochengxu_api/fava.php',
 			data: {
 				sessionkey: this.data.sessionkey,
 				ecmsfrom: 'xiaochengxu',
@@ -317,7 +308,7 @@ Page({
 		})
 		let _this = this;
 		wx.request({
-			url: 'https://www.yishuzi.com.cn/juzi_xiaochengxu_api/fava.php',
+			url: 'https://www.yishuzi.com.cn/shop_xiaochengxu_api/fava.php',
 			data: {
 				sessionkey: this.data.sessionkey,
 				ecmsfrom: 'xiaochengxu',
@@ -348,9 +339,9 @@ Page({
 	getListData: function (classid, page) {
 		let that = this
 		console.log('__page__', this.data.page)
-		console.log('https://www.yishuzi.com.cn/juzi_xiaochengxu_api/?getJson=column&classid=' + classid + '&page=' + page)
+		console.log('https://www.yishuzi.com.cn/shop_xiaochengxu_api/?getJson=column&classid=' + classid + '&page=' + page)
 		wx.request({
-			url: 'https://www.yishuzi.com.cn/juzi_xiaochengxu_api/?getJson=column&classid=' + classid + '&page=' + page,
+			url: 'https://www.yishuzi.com.cn/shop_xiaochengxu_api/?getJson=column&classid=' + classid + '&page=' + page,
 			method: 'GET',
 			dataType: 'json',
 			success: (json) => {

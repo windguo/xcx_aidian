@@ -30,7 +30,7 @@ Component({
 		let that = this;
 		//统计数据
 		wx.request({
-			url: 'https://www.yishuzi.com.cn/juzi_xiaochengxu_api/?getJson=total',
+			url: 'https://www.yishuzi.com.cn/shop_xiaochengxu_api/?getJson=total',
 			method: 'GET',
 			dataType: 'json',
 			success: (json) => {
@@ -42,7 +42,7 @@ Component({
 			}
 		});
 		wx.request({
-			url: 'https://www.yishuzi.com.cn/juzi_xiaochengxu_api/?getJson=member_new&pageSize=1',
+			url: 'https://www.yishuzi.com.cn/shop_xiaochengxu_api/?getJson=member_new&pageSize=1',
 			method: 'GET',
 			dataType: 'json',
 			success: (json) => {

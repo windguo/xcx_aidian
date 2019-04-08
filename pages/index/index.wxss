@@ -37,7 +37,7 @@
 	text-align: center;
 }
 .juzi-list{
-    margin:0 40rpx 40rpx;
+		margin:0 40rpx 40rpx;
 }
 .juzi-item {
 	width: 100%;
@@ -52,6 +52,10 @@
 }
 .juzi-item .top{
 	padding:40rpx;
+}
+.juzi-item .top image{
+	width:150rpx;
+	height:150rpx;
 }
 .juzi-item .top .t{
 	font-size: 36rpx;

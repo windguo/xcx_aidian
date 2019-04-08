@@ -70,7 +70,7 @@ Page({
 	getUserContent:function(){
 		let that = this;
 		wx.request({
-			url: 'https://www.yishuzi.com.cn/juzi_xiaochengxu_api/?getJson=article&userid=' + this.data.userid,
+			url: 'https://www.yishuzi.com.cn/shop_xiaochengxu_api/?getJson=article&userid=' + this.data.userid,
 			method: 'GET',
 			dataType: 'json',
 			success: (json) => {
@@ -108,9 +108,9 @@ Page({
 	getSizeData: function (classid, page) {
 		let that = this
 		console.log('__page__', this.data.page)
-		console.log('https://www.yishuzi.com.cn/juzi_xiaochengxu_api/?getJson=column&size=' + page)
+		console.log('https://www.yishuzi.com.cn/shop_xiaochengxu_api/?getJson=column&size=' + page)
 		wx.request({
-			url: 'https://www.yishuzi.com.cn/juzi_xiaochengxu_api/?getJson=column&size='+ page,
+			url: 'https://www.yishuzi.com.cn/shop_xiaochengxu_api/?getJson=column&size='+ page,
 			method: 'GET',
 			dataType: 'json',
 			success: (json) => {
@@ -125,9 +125,9 @@ Page({
   getListData: function (classid, page) {
     let that = this
     console.log('__page__', this.data.page)
-    console.log('https://www.yishuzi.com.cn/juzi_xiaochengxu_api/?getJson=column&classid=' + classid + '&page=' + page)
+    console.log('https://www.yishuzi.com.cn/shop_xiaochengxu_api/?getJson=column&classid=' + classid + '&page=' + page)
     wx.request({
-      url: 'https://www.yishuzi.com.cn/juzi_xiaochengxu_api/?getJson=column&classid=' + classid + '&page=' + page,
+      url: 'https://www.yishuzi.com.cn/shop_xiaochengxu_api/?getJson=column&classid=' + classid + '&page=' + page,
       method: 'GET',
       dataType: 'json',
       success: (json) => {
@@ -196,7 +196,7 @@ Page({
 		
     if(this.data.state == 2){
 			wx.request({
-				url: 'https://www.yishuzi.com.cn/juzi_xiaochengxu_api/?getJson=article&userid=' + this.data.userid + '&page=' + this.data.page,
+				url: 'https://www.yishuzi.com.cn/shop_xiaochengxu_api/?getJson=article&userid=' + this.data.userid + '&page=' + this.data.page,
 				method: 'GET',
 				dataType: 'json',
 				success: (json) => {
@@ -210,9 +210,9 @@ Page({
 				}
 			})
 		} else if (this.data.state == 3){
-			console.log('https://www.yishuzi.com.cn/juzi_xiaochengxu_api/?getJson=column&size=' + this.data.sizePage + '&page=' + this.data.page);
+			console.log('https://www.yishuzi.com.cn/shop_xiaochengxu_api/?getJson=column&size=' + this.data.sizePage + '&page=' + this.data.page);
 			wx.request({
-				url: 'https://www.yishuzi.com.cn/juzi_xiaochengxu_api/?getJson=column&size=' + this.data.sizePage + '&page=' + this.data.page,
+				url: 'https://www.yishuzi.com.cn/shop_xiaochengxu_api/?getJson=column&size=' + this.data.sizePage + '&page=' + this.data.page,
 				method: 'GET',
 				dataType: 'json',
 				success: (json) => {
@@ -227,7 +227,7 @@ Page({
 			})
 		}else{
 			wx.request({
-				url: 'https://www.yishuzi.com.cn/juzi_xiaochengxu_api/?getJson=column&classid=' + this.data.classid + '&page=' + that.data.page,
+				url: 'https://www.yishuzi.com.cn/shop_xiaochengxu_api/?getJson=column&classid=' + this.data.classid + '&page=' + that.data.page,
 				method: 'GET',
 				dataType: 'json',
 				success: (json) => {
