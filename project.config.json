@@ -1,0 +1,85 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.4.0",
+	"appid": "wxd4a25b5b7acc3a3c",
+	"projectname": "%E7%88%B1%E5%8F%A5%E5%AD%90",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 2,
+			"list": [
+				{
+					"id": 0,
+					"name": "首页",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "我的收藏",
+					"pathName": "pages/my/fava/fava",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "详情页",
+					"pathName": "pages/detail/detail",
+					"query": "id=1183&classid=8",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "我的",
+					"pathName": "pages/my/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "发布句子",
+					"pathName": "pages/publish/juzi/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "userid=2",
+					"pathName": "pages/user_list/index",
+					"query": "userid=2",
+					"scene": null
+				}
+			]
+		}
+	}
+}
