@@ -39,7 +39,7 @@
 						<view class="juzi-item">
 							<navigator class="top" url="../detail/detail?id={{item.id}}&classid={{item.classid}}">
 								<image src="{{item.icon}}" mode="aspectFit"></image>
-								<view class='t'>{{item.title}}</view>
+								<view class='t'>111{{item.title}}</view>
 							</navigator>
 							<view class="bottom">
 								<view  class="onclick">{{item.newstime}}</view>
