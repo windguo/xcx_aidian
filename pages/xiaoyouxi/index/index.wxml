@@ -1,18 +1,12 @@
-<view bindtap="gifHidden" class="covers" hidden="{{hidden}}">
-  <image class="addGif" src='../../images/add.png' background-size="cover"></image>
-</view>
 <view class="j_header" style="height:{{CustomBar}}px;">
 	<button class="j-left icon icon-share" open-type='share' plain="true" hover-class="none"></button>
 	<view bindtap='searchPage' class="search"  style="top:{{titleTop}}px">
 		<view class="icon icon-search"></view>
-		搜索小程序
+		搜索小游戏
 	</view>
 </view>
 <view style="height:{{CustomBar}}px;"></view>
 
-<navigator url="../publish/juzi/index">
-	<icon class="add icon icon-add"></icon>
-</navigator>
 
 <icon bindtap="reloadFn" class="refresh icon icon-refresh"></icon>
 

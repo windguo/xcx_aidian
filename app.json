@@ -5,13 +5,13 @@
 		"pages/bind/bind",
     "pages/search/search",
 		"pages/loginout/loginout",
-		"pages/list/list",
     "pages/detail/detail",
-		"pages/user_list/index",
 		"pages/my/index/index",
 		"pages/my/fava/fava",
 		"pages/my/publish/publish",
-		"pages/publish/juzi/index"
+		"pages/publish/juzi/index",
+		"pages/xiaochengxu/index/index",
+		"pages/xiaoyouxi/index/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -28,7 +28,19 @@
 				"pagePath": "pages/index/index",
 				"iconPath": "images/ic_home.png",
 				"selectedIconPath": "images/ic_home_active.png",
-				"text": "首页"
+				"text": "最新推荐"
+			},
+			{
+				"pagePath": "pages/xiaochengxu/index/index",
+				"iconPath": "images/ic_xiaochengxu.png",
+				"selectedIconPath": "images/ic_xiaochengxu_active.png",
+				"text": "小程序"
+			},
+			{
+				"pagePath": "pages/xiaoyouxi/index/index",
+				"iconPath": "images/ic_xiaoyouxi.png",
+				"selectedIconPath": "images/ic_xiaoyouxi_active.png",
+				"text": "小游戏"
 			},
 			{
 				"pagePath": "pages/my/index/index",
