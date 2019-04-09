@@ -7,7 +7,7 @@ Page({
       // 来自页面内转发按钮
       console.log('res.target===', res.target)
       return {
-        title: this.data.title,
+				title: this.data.detailData.title,
         path: '/pages/detail/detail?id=' + this.data.id,
         success: (res) => {
           wx.showToast({
@@ -22,7 +22,7 @@ Page({
       }
     } else {
       return {
-        title: this.data.title,
+				title: this.data.detailData.title,
         path: '/pages/detail/detail?id=' + this.data.id,
         success: (res) => {
           wx.showToast({
@@ -122,6 +122,11 @@ Page({
 		this.check_fava_article();
 		this._getList();
   },
+	preCode:function(){
+		wx.previewImage({
+			urls: ['' + this.data.detailData.qrode + '']
+		})
+	},
 	publishCommit(e) {
 		console.log('eeee', e)
 		if (e.detail.value.smalltext == '') {
@@ -382,84 +387,6 @@ Page({
       }
     })
   },
-  drawText: function (ctx, str, initHeight, titleHeight, canvasWidth) {
-    var lineWidth = 0
-    var lastSubStrIndex = 0; // 每次开始截取的字符串的索引
-    for (let i = 0; i < str.length; i++) {
-      lineWidth += ctx.measureText(str[i]).width
-      if (lineWidth > canvasWidth) {
-        ctx.fillText(str.substring(lastSubStrIndex, i), 50, initHeight); // 绘制截取部分
-        initHeight += 30; // 20为字体的高度
-        lineWidth = 0
-        lastSubStrIndex = i
-      // titleHeight += 30
-      }
-      if (i == str.length - 1) { // 绘制剩余部分
-        ctx.fillText(str.substring(lastSubStrIndex, i + 1), 50, initHeight)
-      }
-    }
-    console.log('----initHeight--', initHeight)
-    // 标题border-bottom 线距顶部距离
-    titleHeight = titleHeight + 100
-    return titleHeight
-  },
-  // 创建海报
-  creat: function () {
-		wx.showLoading({
-			title: '生成中'
-		});
-    // console.log('https://www.yishuzi.com.cn/e/api/jianjie8_xiaochengxu/juzi_xiaochengxu_qrode.php?path=' + encodeURIComponent('pages/detail/detail') + '&scene=start_index&width=100')
-    let that = this
-    wx.getImageInfo({
-      //   src: 'https://www.yishuzi.com.cn/e/api/jianjie8_xiaochengxu/juzi_xiaochengxu_qrode.php?path=' + encodeURIComponent('pages/detail/detail') + '&scene=start_index&width=100',
-      src: 'https://www.yishuzi.com.cn/e/api/xiaochengxu/aijuzi_qrode.jpg',
-      success: function (res) {
-        console.log('that.data', res)
-        that.setData({
-          tempFilePath: res.path
-        })
-        // 开始绘画
-        const ctx = wx.createCanvasContext('shareCanvas')
-        let _width = 650
-        ctx.fillRect(0, 0, _width, 800)
-        ctx.setFontSize(20)
-        ctx.fillStyle = '#555'
-        ctx.lineWidth = 0
-        ctx.drawImage('../../images/juzi_bg.png', 0, 0, 400, 800)
-        var str = that.data.smalltext.replace(/<[^<>]+>/g, '').substring(0, 170) + '...'
-        var titleHeight = 50; // 标题的高度
-        var canvasWidth = _width - 360; // 计算canvas的宽度
-        var initHeight = 300; // 绘制字体距离canvas顶部初始的高度
-        // 标题border-bottom 线距顶部距离
-        titleHeight = that.drawText(ctx, str, initHeight, titleHeight, canvasWidth); // 调用行文本换行函数
-        console.log('titleHeight---', str.height)
-        ctx.moveTo(130, titleHeight)
-
-        ctx.stroke() // 绘制已定义的路径
-        ctx.setFontSize(16)
-        ctx.fillStyle = '#000'
-        ctx.fillText('识别二维码微信搜索“爱句子”,每天更新句子', 50, 640)
-
-        ctx.drawImage(that.data.tempFilePath, 140, 660, 120, 120)
-
-        ctx.draw(true, setTimeout(function () {
-          wx.canvasToTempFilePath({
-            canvasId: 'shareCanvas',
-
-            success: (res) => {
-              that.setData({
-                shareTempFilePath: res.tempFilePath
-			  })
-			  wx.hideLoading();
-              // 预览图片
-              that.previewImages(that.data.shareTempFilePath)
-              that.saveImageToPhotosAlbum()
-            }
-          })
-        }, 100))
-      }
-    })
-  },
   scrolltolowerLoadData: function (e) {
     console.log('scrolltolowerLoadData', e)
     this.getListData(this.data.classid, true)
@@ -470,46 +397,6 @@ Page({
     wx.previewImage({
       current: current,
       urls: ['' + current + '']
-    })
-  },
-  // 保存至相册
-  saveImageToPhotosAlbum: function () {
-    if (!this.data.shareTempFilePath) {
-      wx.showModal({
-        title: '提示',
-        content: '请先点击生成句子海报',
-        showCancel: false
-      })
-    }
-    wx.saveImageToPhotosAlbum({
-      filePath: this.data.shareTempFilePath,
-      success: (res) => {
-        if (res.errMsg == 'saveImageToPhotosAlbum:ok') {
-          wx.showModal({
-            content: '保存成功',
-            showCancel: false,
-            success: function (res) {
-              console.log(res)
-              wx.showModal({
-                content: '是否返回首页',
-                showCancel: true,
-                confirmColor: '#ff5a00',
-                success: function (res) {
-                  console.log(res)
-                  if (res.confirm) {
-                    wx.navigateTo({
-                      url: '../index/index'
-                    })
-                  }
-                }
-              })
-            }
-          })
-        }
-      },
-      fail: (err) => {
-        console.log(err)
-      }
     })
   }
 })

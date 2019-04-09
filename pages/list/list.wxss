@@ -1,0 +1,47 @@
+
+.node-list{
+	display: flex;
+	flex-flow:wrap;
+	justify-content: first baseline;
+	margin:40rpx;
+}
+.node-item {
+	width: 22%;
+	margin:10rpx;
+	line-height: 60rpx;
+	color:#333;
+	font-weight: 300;
+	text-align: center;
+}
+.node-item image{
+	width:120rpx;
+	height:120rpx;
+	border: 1rpx solid #f90;
+	padding:10rpx;
+	border-radius: 10rpx;
+}
+.node-item .title{
+	font-size: 36rpx;
+	max-width: 150rpx;
+	text-overflow: ellipsis;
+  white-space: nowrap;
+	overflow: hidden;
+}
+
+.sharetoFrinend{
+	width:60%;
+	position: fixed;
+	bottom:30rpx;
+	font-size: 36rpx;
+	left:20%;
+	opacity: 0.85
+}
+.publishButton{
+	width: 60%;
+	margin-top:30rpx;
+	font-size: 36rpx;
+	opacity: 0.85
+
+}
+
+.nodata{margin-top:150rpx;font-size: 50rpx;color: #999;text-align: center;font-weight: 100;}

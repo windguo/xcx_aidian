@@ -6,7 +6,7 @@ Page({
 		StatusBar: app.globalData.StatusBar,
 		CustomBar: app.globalData.CustomBar,
 		navbarData: {
-			title: "发布句子",
+			title: "发布小程序",
 			showCapsule: true,
 			back: true,
 			home: true

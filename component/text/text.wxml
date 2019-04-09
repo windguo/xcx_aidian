@@ -9,7 +9,7 @@
 				</swiper-item>
 				<swiper-item>
 					<view class="icon icon-rank">
-						今日<span>({{snewstime}})</span>新增句子<span>{{todayUpdate}}</span>个,共有<span>{{total}}</span>个
+						今日<span>({{snewstime}})</span>新增小程序<span>{{todayUpdate}}</span>个,共有<span>{{total}}</span>个
 						</view>
 				</swiper-item>
 			</block> 

@@ -5,7 +5,7 @@
 	<button class="j-left icon icon-share" open-type='share' plain="true" hover-class="none"></button>
 	<view bindtap='searchPage' class="search"  style="top:{{titleTop}}px">
 		<view class="icon icon-search"></view>
-		搜索小程序
+		点此搜索
 	</view>
 </view>
 <view style="height:{{CustomBar}}px;"></view>
@@ -13,40 +13,59 @@
 <navigator url="../publish/juzi/index">
 	<icon class="add icon icon-add"></icon>
 </navigator>
-
-<icon bindtap="reloadFn" class="refresh icon icon-refresh"></icon>
-
-<view class="container bgeee">
-  <view>
-    <scroll-view scroll-with-animation="true" scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
-			<view wx:for="{{expertList}}" wx:for-index="idx" wx:for-item="item" class="tab-item {{currentTab==idx?'active':''}}"
-					data-current="{{idx}}" bindtap="swichNav">{{item.classname}}</view>
-	</scroll-view>
-  </view>
-  <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="swiperChange" style="height:{{winHeight}}rpx">
-    <swiper-item wx:for="{{expertListi}}" wx:for-index="i" wx:for-item="items">
-			<scroll-view scroll-with-animation="true" scroll-y="true" class="scoll-h" bindscrolltolower="scrolltolowerLoadData">
-				<block wx:if="{{currentTab == 0}}">
-          <!-- <text text-data='{{textData}}'></text> -->
-        </block>
-        <view class="nodata" wx:if='{{nodata}}'>加载数据中...</view>
-				<view wx:else class="juzi-list mt40">
-					<block wx:for="{{contentArray}}" wx:for-index="i" wx:for-item="item">
-						<view class="juzi-item">
-							<navigator url="../detail/detail?id={{item.id}}&classid={{item.classid}}">
-								<view class="top">
-									<image src="{{item.icon}}" mode="aspectFit"></image>
-									<view class='t'>
-										<view class="title">{{item.title}}</view>
-										<view class="newstime">{{item.newstime}}</view>
-									</view>
-								</view>
-								<view class="intro">{{item.intro}}</view>
-							</navigator>
+<view class="container">
+	<!-- 推荐小程序开始 -->
+	<view class="elite">
+		<view class="hd">
+			<h2>推荐小程序</h2>
+			<!-- <view class="upElite">我要推荐</view> -->
+		</view>
+		<view class="elite-list mt40">
+			<block wx:for="{{eliteArray}}" wx:for-index="i" wx:for-item="item">
+				<view class="elite-item">
+					<navigator url="../detail/detail?id={{item.id}}&classid={{item.classid}}">
+						<view class="top">
+							<image src="{{item.icon}}" mode="aspectFit"></image>
+							<view class='t'>
+								<view class="title">{{item.title}}</view>
+							</view>
 						</view>
-					</block>
+					</navigator>
 				</view>
-			</scroll-view>
-    </swiper-item>
-  </swiper>
+			</block>
+		</view>
+	</view>
+	<!-- 推荐小程序结束 -->
+	<!-- 小程序分类开始 -->
+	<view class="elite bgf">
+		<view class="hd">
+			<h2>小程序分类</h2>
+		</view>
+		<view class="elite-list mt40">
+			<block wx:for="{{xiaochengxuClassArray}}" wx:for-index="i" wx:for-item="item">
+				<view class="elite-item">
+					<navigator url="../list/list?classid={{item.classid}}&classname={{item.classname}}&status=2">
+						<view class="title">{{item.classname}}</view>
+					</navigator>
+				</view>
+			</block>
+		</view>
+	</view>
+	<!-- 小程序分类结束 -->
+	<!-- 小程序分类开始 -->
+	<view class="elite bgf">
+		<view class="hd">
+			<h2>小游戏分类</h2>
+		</view>
+		<view class="elite-list mt40">
+			<block wx:for="{{xiaoyouxiClassArray}}" wx:for-index="i" wx:for-item="item">
+				<view class="elite-item">
+					<navigator url="../list/list?classid={{item.classid}}&classname={{item.classname}}&status=3">
+						<view class="title">{{item.classname}}</view>
+					</navigator>
+				</view>
+			</block>
+		</view>
+	</view>
+	<!-- 小程序分类结束 -->
 </view>

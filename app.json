@@ -5,6 +5,7 @@
 		"pages/bind/bind",
     "pages/search/search",
 		"pages/loginout/loginout",
+		"pages/list/list",
     "pages/detail/detail",
 		"pages/my/index/index",
 		"pages/my/fava/fava",
@@ -29,18 +30,6 @@
 				"iconPath": "images/ic_home.png",
 				"selectedIconPath": "images/ic_home_active.png",
 				"text": "最新推荐"
-			},
-			{
-				"pagePath": "pages/xiaochengxu/index/index",
-				"iconPath": "images/ic_xiaochengxu.png",
-				"selectedIconPath": "images/ic_xiaochengxu_active.png",
-				"text": "小程序"
-			},
-			{
-				"pagePath": "pages/xiaoyouxi/index/index",
-				"iconPath": "images/ic_xiaoyouxi.png",
-				"selectedIconPath": "images/ic_xiaoyouxi_active.png",
-				"text": "小游戏"
 			},
 			{
 				"pagePath": "pages/my/index/index",

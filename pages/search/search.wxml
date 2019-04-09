@@ -1,6 +1,6 @@
 <view class="j_header" style="height:{{CustomBar}}px;">
 	<view style="margin-top:{{titleTop+10}}px" class="icon icon-back" bindtap="_back"></view>
-	<view class="j-title" style="top:{{titleTop+10}}px">搜索句子</view>
+	<view class="j-title" style="top:{{titleTop+10}}px">搜索小程序</view>
 </view>
 <view style="height:{{CustomBar}}px;"></view>
 

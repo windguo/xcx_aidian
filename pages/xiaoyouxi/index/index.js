@@ -144,7 +144,7 @@ Page({
 		let _classid = []
 		let _expertListi = []
 		wx.request({
-			url: 'https://www.yishuzi.com.cn/shop_xiaochengxu_api/?getJson=class',
+			url: 'https://www.yishuzi.com.cn/shop_xiaochengxu_api/?getJson=class&classid=8',
 			method: 'GET',
 			dataType: 'json',
 			success: (json) => {

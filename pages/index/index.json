@@ -2,7 +2,5 @@
 	"usingComponents": {
 		"header": "/component/header/header",
 		"textComponent": "/component/text/text"
-	},
-	"enablePullDownRefresh": true,
-	"backgroundTextStyle": "dark"
+	}
 }

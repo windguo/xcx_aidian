@@ -35,6 +35,6 @@
 					</view>
 				</block>
 			</view>
-			<button bindtap="goPublish" type='warn' class="sharetoFrinend">继续发布句子</button>
+			<button bindtap="goPublish" type='warn' class="sharetoFrinend">继续发布小程序</button>
     </scroll-view>
 </view>

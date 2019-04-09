@@ -2,7 +2,7 @@
 <view style="height:{{CustomBar}}px;"></view>
 
 <view class="container">
-	<view class="tips">欢迎大家分享句子,审核通过后将会收到微信通知哟！</view>
+	<view class="tips">欢迎大家分享小程序,审核通过后将会收到微信通知哟！</view>
 	<form bindsubmit="formSubmit" report-submit='true'>
 		<view class="publishBox">
 			<view class="classs">
@@ -16,6 +16,6 @@
 			<textarea class="textarea" show-confirm-bar="true" maxlength="-1" adjust-position="true" formSubmit="formSubmit" auto-focus name="smalltext" placeholder="请输入内容" />
 		</view>
 		</view>
-		<button class="button" type='warn' form-type="submit">立即发布句子</button>
+		<button class="button" type='warn' form-type="submit">立即发布小程序</button>
 	</form>
 </view>

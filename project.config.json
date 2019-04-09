@@ -67,7 +67,7 @@
 				},
 				{
 					"id": 4,
-					"name": "发布句子",
+					"name": "发布小程序",
 					"pathName": "pages/publish/juzi/index",
 					"query": "",
 					"scene": null

@@ -126,7 +126,7 @@ Page({
 	},
 	onShareAppMessage: function (res) {
 		return {
-			title: '爱句子的' + this.data.classname + '列表,@你来看看有喜欢的么',
+			title: '爱店的' + this.data.classname + '列表,@你来看看有喜欢的么',
 			success: (res) => {
 				wx.showToast({
 					content: '分享成功'

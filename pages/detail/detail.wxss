@@ -1,10 +1,27 @@
-@import "/wxParse/wxParse.wxss";
-
-
-.show_content .cont p{display: block;font-size: 40rpx;font-weight: 300;}
-.show_content .cont{line-height: 60rpx;}
-.show_content .cont .contes{color: #000;font-size: 40rpx;font-weight: 300;}
-.show_content .wxParse-p{color: #666;padding:30rpx 0;}
+.show_content .hd{
+	display: flex;
+	margin:40rpx;
+}
+.show_content .hd image{
+	width: 120rpx;
+	height:120rpx;
+	padding: 10rpx;
+	border: 1px solid #f90;
+	border-radius: 20rpx;
+}
+.show_content .hd .r{
+	margin-left:40rpx;
+	line-height: 70rpx;
+}
+.onclick{
+	color: #ed6ea0;
+	font-size: 36rpx;
+}
+.go{
+	font-size: 34rpx;
+	margin-top:40rpx;
+	padding:10rpx 0;
+}
 
 .contents{
 	padding:40rpx;

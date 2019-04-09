@@ -1,30 +1,32 @@
 <header navbar-data='{{navbarData}}'></header>
 <view style="height:{{CustomBar}}px;"></view>
 
-
 <view class="container">
   <view class="show_content">
-    <view class="cont">
-      <view class="contes">
-				<h1>{{detailData.title}}</h1>
-        <view class="contents">
-					<view class="co">
-						{{detailData.intro}}
-					</view>
-				</view>
-				<view class="bottom">
-					<view class="onclick icon">{{onclick}}℃</view>
-					<button open-type='share' class='icon icon-share' plain="true">分享</button>
-					<block wx:if="{{favaFlag}}">
-						<view bindtap='favaDisFn' class="icon icon-close_light ed">移除</view>
-					</block>
-					<block wx:else>
-						<view bindtap='favaFn' class="icon icon-favor_light">收藏</view>
-					</block>
-					<view bindtap='diggtopFn' class="icon icon-appreciate_light {{diggFlag ? 'ed' :''}}">点赞({{diggtop}})</view>
-				</view>
-      </view>
-    </view>
+    <view class="hd">
+			<image src="{{detailData.icon}}" mode="aspectFit"></image>
+			<view class="r">
+				<view class="t">{{detailData.title}}</view>
+				<view class="onclick">{{detailData.onclick}}人已访问过</view>
+			</view>
+		</view>
+		<view class="contents">
+			<view class="co">
+				{{detailData.intro}}
+			</view>
+			<button type='warn' bindtap='preCode' class="go">点此打开,长按识别访问{{detailData.title}}</button>
+		</view>
+		<view class="bottom">
+			<view class="onclick icon">{{detailData.onclick}}℃</view>
+			<button open-type='share' class='icon icon-share' plain="true">分享</button>
+			<block wx:if="{{favaFlag}}">
+				<view bindtap='favaDisFn' class="icon icon-close_light ed">移除</view>
+			</block>
+			<block wx:else>
+				<view bindtap='favaFn' class="icon icon-favor_light">收藏</view>
+			</block>
+			<view bindtap='diggtopFn' class="icon icon-appreciate_light {{diggFlag ? 'ed' :''}}">点赞({{detailData.diggtop}})</view>
+		</view>
   </view>
 	<!-- 评论区域开始 -->
 	<h2 class="h2Center">最新评论</h2>
@@ -50,25 +52,4 @@
 		</form>
 	</view>
 	<!-- 评论区域结束 -->
-  <view style="height:0rpx;overflow:hidden;text-indent:-99999rpx;position:absolute;top:-99999rpx;left:-99999rpx;">
-    <canvas canvas-id="shareCanvas" class="canvas" />
-  </view>
-  <view class="guess">
-    <h2>猜你喜欢</h2>
-    <view class="juzi-list">
-				<block wx:for="{{contentArray}}" wx:for-index="i" wx:for-item="item">
-					<view class="juzi-item">
-						<navigator class="top" url="../detail/detail?id={{item.id}}&classid={{item.classid}}">
-							<view class='t'>{{item.smalltext}}</view>
-						</navigator>
-						<view class="bottom">
-							<view  class="onclick">{{item.newstime}}</view>
-							<navigator url="../list/list?state=2&userid={{item.userid}}&username={{item.username}}">
-								<view class="username">{{item.username}}</view>
-							</navigator>
-						</view>
-					</view>
-				</block>
-			</view>
-  </view>
 </view>

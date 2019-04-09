@@ -1,0 +1,28 @@
+<header navbar-data='{{navbarData}}'></header>
+<view style="height:{{CustomBar}}px;"></view>
+
+<view class="container">
+    <scroll-view scroll-with-animation="true" scroll-y="true" style="height:{{winHeight}}rpx;" bindscrolltolower="scrolltolowerLoadData">
+				<view class="nodata" wx:if="{{contentArrayFlag}}">
+					暂未发布小程序,敬请期待
+					<navigator url="../publish/juzi/index">
+						<!-- <button type='warn' class="publishButton">立即发布</button> -->
+					</navigator>
+				</view>
+        <view wx:else class="node-list">
+					<block wx:for="{{contentArray}}" wx:for-index="i" wx:for-item="item">
+						<view class="node-item">
+							<navigator url="../detail/detail?id={{item.id}}&classid={{item.classid}}">
+								<view class="top">
+									<image src="{{item.icon}}" mode="aspectFit"></image>
+									<view class='t'>
+										<view class="title">{{item.title}}</view>
+									</view>
+								</view>
+							</navigator>
+						</view>
+					</block>
+					<button open-type='share' type='warn' class="sharetoFrinend">分享给好友</button>
+				</view>
+    </scroll-view>
+</view>
