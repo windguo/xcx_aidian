@@ -36,6 +36,27 @@
 		</view>
 	</view>
 	<!-- 推荐小程序结束 -->
+  <!-- 最新小程序开始 -->
+	<view class="elite">
+		<view class="hd">
+			<h2>最新更新</h2>
+		</view>
+		<view class="elite-list mt40">
+			<block wx:for="{{newArray}}" wx:for-index="i" wx:for-item="item">
+				<view class="elite-item">
+					<navigator url="../detail/detail?id={{item.id}}&classid={{item.classid}}">
+						<view class="top">
+							<image src="{{item.icon}}" mode="aspectFit"></image>
+							<view class='t'>
+								<view class="title">{{item.title}}</view>
+							</view>
+						</view>
+					</navigator>
+				</view>
+			</block>
+		</view>
+	</view>
+	<!-- 最新小程序结束 -->
 	<!-- 小程序分类开始 -->
 	<view class="elite bgf">
 		<view class="hd">

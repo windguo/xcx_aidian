@@ -93,13 +93,16 @@ button[plain]{ border:0;padding:0;margin:0;margin-top:30rpx;margin-left:50rpx;co
 .search .icon{margin-right:10rpx;}
 
 /* 推荐小程序开始 */
-.elite{
-	background: #fffff0;
-}
 .elite .hd{
 	margin:40rpx;
 	display: flex;
-	justify-content: space-between
+	justify-content: space-between;
+  border-bottom:1rpx solid #ccc;
+  padding-bottom: 20rpx;
+}
+.elite .hd h2{
+  border-left:6rpx solid #ef4d2e;
+  padding-left:20rpx;
 }
 .elite .hd .upElite{
 	color: #ef4d2e;
@@ -108,7 +111,7 @@ button[plain]{ border:0;padding:0;margin:0;margin-top:30rpx;margin-left:50rpx;co
 	display: flex;
 	flex-flow:wrap;
 	justify-content: first baseline;
-	margin:0 40rpx 40rpx;
+	margin:0 40rpx;
 }
 .elite-item{
 	width: 22%;
@@ -135,4 +138,7 @@ button[plain]{ border:0;padding:0;margin:0;margin-top:30rpx;margin-left:50rpx;co
 /* 推荐小程序结束 */
 .bgf{
 	background: #fff;
+}
+.bgdff9fb{
+  background: #dff9fb;
 }
