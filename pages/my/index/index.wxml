@@ -7,7 +7,7 @@
 		</view>
 	</view>
 	<view class="list">
-		<!--<navigator url="../fava/fava" hover-class="navigator-hover">
+		<navigator url="../fava/fava" hover-class="navigator-hover">
 				<view class="flex">
 					<view class="it">
 						<text class="icon icon-goods_favor_light"></text>
@@ -16,7 +16,7 @@
 					<text class="r icon icon-right"></text>
 				</view>
 		</navigator>
-		<navigator url="../../publish/juzi/index" hover-class="navigator-hover">
+		<navigator url="../../publish/index" hover-class="navigator-hover">
 				<view class="flex">
 					<view class="it">
 						<text class="icon icon-edit"></text>
@@ -33,7 +33,7 @@
 					</view>
 					<text class="r icon icon-right"></text>
 				</view>
-		</navigator>-->
+		</navigator>
 		<view class="flex" bindtap='copyTBL' data-text="fengzhang201909">
 			<view class="it">
 				<text class="icon icon-info"></text>

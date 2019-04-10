@@ -4,7 +4,7 @@ var app = getApp()
 Page({
   onShareAppMessage: function (res) {
 		return {
-			title: '爱店(爱小程序商店)欢迎您...',
+			title: '爱店(爱小程序商店)汇集大量小程序,欢迎光临',
 			path: '/pages/index/index',
 			success: (res) => {
 				wx.showToast({

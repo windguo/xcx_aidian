@@ -4,7 +4,7 @@ Page{
 .header{
 	display: flex;
 	padding:140rpx 50rpx 60rpx 50rpx;
-	background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 80%);
+	background-image: linear-gradient(-60deg, #ef4d2e 0%, #ffdd3f 100%);
 }
 .header image{
 	width: 150rpx;

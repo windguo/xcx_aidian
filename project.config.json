@@ -36,7 +36,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 4,
 			"list": [
 				{
 					"id": 0,
@@ -68,7 +68,7 @@
 				{
 					"id": 4,
 					"name": "发布小程序",
-					"pathName": "pages/publish/juzi/index",
+					"pathName": "pages/publish/index",
 					"query": "",
 					"scene": null
 				},

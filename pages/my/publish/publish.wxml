@@ -5,7 +5,7 @@
     <scroll-view scroll-with-animation="true" scroll-y="true" style="height:{{winHeight}}rpx;" bindscrolltolower="scrolltolowerLoadData">
 			<view class="nodata" hidden='{{dataHidden}}'>
 				暂未发布
-				<navigator redirect url='../../publish/juzi/index'>
+				<navigator redirect url='../../publish/index'>
 					<button style="margin:40rpx 140rpx;" type='warn'>立即发布</button>
 				</navigator>
 			</view>

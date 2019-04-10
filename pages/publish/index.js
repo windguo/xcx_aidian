@@ -1,4 +1,4 @@
-var COMMONFN = require('../../../utils/util.js');
+var COMMONFN = require('../../utils/util.js');
 var app = getApp();
 Page({
 	data: {
@@ -6,7 +6,7 @@ Page({
 		StatusBar: app.globalData.StatusBar,
 		CustomBar: app.globalData.CustomBar,
 		navbarData: {
-			title: "发布小程序",
+			title: "发布作品",
 			showCapsule: true,
 			back: true,
 			home: true
@@ -120,7 +120,7 @@ Page({
 									});
 								} else {
 									wx.redirectTo({
-										url: '../../publish/juzi/index?index=' + that.data.index
+										url: '../../publish/index?index=' + that.data.index
 									});
 								}
 							}

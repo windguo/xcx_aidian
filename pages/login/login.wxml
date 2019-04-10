@@ -4,7 +4,7 @@
       <icon bindtap="_back" class="icon icon-back"></icon>
         <view class='header'>
             <image class="icon" src='/images/icon.jpeg' background-size="cover"></image>
-						<h2>爱店 - 爱上小程序商店</h2>
+						<h2>爱店(爱小程序商店)</h2>
         </view>
         
         <view class='content'>

@@ -5,7 +5,7 @@
     <scroll-view scroll-with-animation="true" scroll-y="true" style="height:{{winHeight}}rpx;" bindscrolltolower="scrolltolowerLoadData">
 				<view class="nodata" wx:if="{{contentArrayFlag}}">
 					暂未发布小程序,敬请期待
-					<navigator url="../publish/juzi/index">
+					<navigator url="../publish/index">
 						<!-- <button type='warn' class="publishButton">立即发布</button> -->
 					</navigator>
 				</view>

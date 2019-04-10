@@ -121,7 +121,7 @@ Page({
 	},
 	goPublish:function(){
 		wx.redirectTo({
-			url: '../../publish/juzi/index',
+			url: '../../publish/index',
 		})
 	},
 	onShareAppMessage: function (res) {

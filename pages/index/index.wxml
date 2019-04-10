@@ -10,7 +10,7 @@
 </view>
 <view style="height:{{CustomBar}}px;"></view>
 
-<navigator url="../publish/juzi/index">
+<navigator url="../publish/index">
 	<icon class="add icon icon-add"></icon>
 </navigator>
 <view class="container">
