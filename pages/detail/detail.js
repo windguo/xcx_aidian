@@ -48,6 +48,28 @@ Page({
 		height: app.globalData.height * 2 + 25,
 		StatusBar: app.globalData.StatusBar,
 		CustomBar: app.globalData.CustomBar,
+		//图片地址
+		imgList: [],
+		//是否采用衔接滑动  
+		circular: true,
+		//是否显示画板指示点  
+		indicatorDots: true,
+		//选中点的颜色  
+		indicatorcolor: "#000",
+		//是否竖直  
+		vertical: false,
+		//是否自动切换  
+		autoplay: true,
+		//自动切换的间隔
+		interval: 2500,
+		//滑动动画时长毫秒  
+		duration: 1000,
+		//所有图片的高度  
+		imgheights: [],
+		//图片宽度 
+		imgwidth: 300,
+		//默认  
+		current: 0,
     index: null,
     winHeight: '', // 窗口高度
     currentTab: 0, // 预设当前项的值
@@ -94,6 +116,7 @@ Page({
       success: (json) => {
         console.log('detail---', json.data)
         var that = this;
+				console.log('detailData..', json.data.result.preimgs);
         this.setData({
           detailData:json.data.result,
           commitData: {
@@ -122,6 +145,26 @@ Page({
 		this.check_fava_article();
 		this._getList();
   },
+	imageLoad: function (e) {//获取图片真实宽度  
+		var imgwidth = e.detail.width,
+			imgheight = e.detail.height,
+			//宽高比  
+			ratio = imgwidth / imgheight;
+		console.log(imgwidth, imgheight)
+		//计算的高度值  
+		var viewHeight = 750 / ratio;
+		var imgheight = viewHeight;
+		var imgheights = this.data.imgheights;
+		//把每一张图片的对应的高度记录到数组里  
+		imgheights[e.target.dataset.id] = imgheight;
+		this.setData({
+			imgheights: imgheights
+		})
+	},
+	bindchange: function (e) {
+		// console.log(e.detail.current)
+		this.setData({ current: e.detail.current })
+	},
 	preCode:function(){
 		wx.previewImage({
 			urls: ['' + this.data.detailData.qrode + '']

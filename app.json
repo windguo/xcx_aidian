@@ -10,7 +10,11 @@
 		"pages/my/index/index",
 		"pages/my/fava/fava",
 		"pages/my/publish/publish",
-		"pages/publish/index",
+		"pages/publish/index/index",
+		"pages/publish/cropper/cropper",
+		"pages/publish/morecropper/cropper",
+		"pages/publish/xiaochengxu/index",
+		"pages/publish/xiaoyouxi/index",
 		"pages/xiaochengxu/index/index",
 		"pages/xiaoyouxi/index/index"
   ],
@@ -29,7 +33,12 @@
 				"pagePath": "pages/index/index",
 				"iconPath": "images/ic_home.png",
 				"selectedIconPath": "images/ic_home_active.png",
-				"text": "最新推荐"
+				"text": "首页"
+			},{
+				"pagePath": "pages/xiaochengxu/index/index",
+				"iconPath": "images/ic_xiaochengxu.png",
+				"selectedIconPath": "images/ic_xiaochengxu_active.png",
+				"text": "小程序"
 			},
 			{
 				"pagePath": "pages/my/index/index",

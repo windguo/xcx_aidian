@@ -25,7 +25,7 @@
 				<view wx:else class="juzi-list mt40">
 					<block wx:for="{{contentArray}}" wx:for-index="i" wx:for-item="item">
 						<view class="juzi-item">
-							<navigator url="../detail/detail?id={{item.id}}&classid={{item.classid}}">
+							<navigator class="nav" url="../../detail/detail?id={{item.id}}&classid={{item.classid}}">
 								<view class="top">
 									<image src="{{item.icon}}" mode="aspectFit"></image>
 									<view class='t'>

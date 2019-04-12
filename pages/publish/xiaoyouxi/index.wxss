@@ -1,0 +1,154 @@
+.publishBox{
+	padding: 30rpx 40rpx;
+}
+.publishBox .title{
+	width:90%;
+	border-radius: 20rpx;
+	border: 2rpx solid #fa7263;
+	background: #fff;
+	font-size:36rpx;
+	padding:30rpx;
+	margin-bottom:30rpx;
+}
+.pics{margin-bottom:50rpx;}
+.pics image{width:200px;height:200px;}
+.add{
+	font-size: 40rpx;
+	margin:20rpx 40rpx 40rpx 0;
+	color: blueviolet;
+	width:200px;
+}
+.button{
+	margin:0 50rpx 50rpx;
+}
+.cancel{
+	margin:40rpx 0 0rpx 40rpx;
+	color: #fa7263;
+	font-size:36rpx;
+}
+.textareas{
+	margin-bottom:20rpx;
+}
+.textarea{
+	border:2rpx solid #fa7263;
+	background: #fffff0;
+	font-size: 30rpx;
+	height:100rpx;
+	padding:30rpx;
+	border-radius: 20rpx;
+	width: auto;
+}
+
+.choose{line-height: 32px;display: flex;}
+.choose image{width:32px;}
+.choose .tex{color:#fa7263;padding-left:20rpx;}
+.choose2{margin-top:40rpx;}
+
+.classs{
+	margin-bottom: 30rpx;
+	font-size: 30rpx;
+}
+
+.classlist{
+	display: flex;
+  flex-flow: wrap;
+}
+.classlist .text{
+	width: 23%;
+	font-size:30rpx;
+	background: #fff;
+	border-radius: 20rpx;
+	padding:20rpx;
+	color:#333;
+	text-align: center;
+	margin-right: 20rpx;
+	margin-bottom: 20rpx;
+}
+.tips{
+	background: #fae1cd;
+	color: #c00;
+	font-size: 30rpx;
+	padding:30rpx;
+	border-top:1px solid #f8f8f8;
+	font-weight: 300;
+}
+
+.inputStyle{
+	border:1rpx solid #fa7263;
+	font-size:30rpx;
+	padding:20rpx;
+	border-radius: 20rpx;
+	margin-bottom:20rpx;
+	background:#fffff0;
+}
+.singleImg{
+	background:#fffff0;
+	border:1rpx solid #fa7263;
+	border-radius: 20rpx;
+	margin:40rpx 0;
+	padding:20rpx;
+	display: flex;
+	justify-content: space-around;
+}
+.singleImg .a{
+	flex: 1;
+}
+.singleImg .b{
+	font-size: 30rpx;
+	margin-bottom:20rpx;
+	text-align: center;
+}
+
+
+
+.container .submitBtn {
+  background-color: blueviolet;
+  color: white;
+  font-size: 34rpx;
+  width: 710rpx;
+  height: 66rpx;
+  line-height: 66rpx;
+  margin-top: 15rpx;
+}
+
+/* 多图 */
+.container .imgview {
+	display: flex;
+	justify-content: flex-start;
+	flex-flow: wrap;
+	margin:30rpx 0;
+	align-items: left;
+	padding:20rpx;
+	border-radius: 20rpx;
+	border:1rpx solid #fa7263;
+	background: #fffff0;
+}
+.container .imgview h2{
+	font-size:30rpx;
+	margin-bottom:20rpx;
+}
+.container .imgwrap{
+	position: relative;
+}
+.container .imgview .te{
+	position: absolute;
+	bottom:10rpx;
+	left:0rpx;
+	color: #fff;
+	background-color: rgba(90, 2, 2, 0.795);
+	padding:10rpx 20rpx;
+	font-size:30rpx;
+}
+.container .imgview .no-img {
+	width:190rpx;
+	height:190rpx;
+  margin-right: 10rpx;
+}
+.container .imgview .sel-img {
+  display: inline-block;
+}
+
+.viewImg{
+	width: 200rpx;
+	height:200rpx;
+}

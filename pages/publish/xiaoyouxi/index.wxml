@@ -1,0 +1,51 @@
+<header navbar-data='{{navbarData}}'></header>
+<view style="height:{{CustomBar}}px;"></view>
+
+<view class="container">
+	<view class="tips">上传公众号码,如果没有可以忽略。其他建议都填写</view>
+	<form bindsubmit="formSubmit" report-submit='true'>
+		<view class="publishBox">
+			<view class="classs">
+			<picker bindchange="bindPickerChange" name="classid" value="{{objectArray[index].classid}}" range-key="classname"  range="{{objectArray}}">
+			<view class="picker">
+				选择分类：{{objectArray[index].classname}}
+			</view>
+		</picker>
+		</view>
+		<input class="inputStyle" name="title" value="{{globalTitle}}" type="text" bindblur="titleBindblur" size="42" placeholder="请输入小游戏名称" />
+		<view class="singleImg">
+			<view class="a">
+				<view class='b' >上传图标</view>
+				<image bindtap="upIconfile" class="viewImg" src="{{iconUrl ? iconUrl : '/images/file.png'}}"></image>
+			</view>
+			<view class="a">
+				<view class='b' >上传小游戏码</view>
+				<image bindtap="upQcodefile" class="viewImg" src="{{qrodeUrl ? qrodeUrl : '/images/file.png'}}"></image>
+			</view>
+			<view class="a">
+				<view class='b' >上传公众号码</view>
+		<image bindtap="upPublicWeixinfile" class="viewImg" src="{{public_weixinUrl ? public_weixinUrl : '/images/file.png'}}"></image>
+			</view>
+		</view>
+			<view class='imgview'>
+				<h2>屏幕截图(建议3-5张、尺寸为750×1334)</h2>
+				<block wx:for="{{picsItems}}" wx:key="id">
+					<view class="imgwrap">
+						<image class="no-img sel-img" data-src="{{item}}" src="{{item}}" catchtap='selImagePre'></image>
+						<text class="te" data-item="{{item}}" bindtap="delItem">删除</text>
+					</view>
+				</block>
+				<image hidden='{{isMaxImagesNum}}' class="no-img" catchtap="chooseImageTap" src="/images/file.png"></image>
+			</view>
+			<view class="textareas">
+				<textarea class="textarea" value='{{globalIntro}}' bindblur="introBindblur" show-confirm-bar="true" maxlength="200" adjust-position="true" formSubmit="formSubmit" name="intro" placeholder="请输入小游戏介绍,限制200字内" />
+			</view>
+			<input class="inputStyle" name="weixin" value="{{globalWeixin}}" type="text" bindblur="weixinBindblur" id="weixin" placeholder="请输入开发者微信号,便于沟通" />
+			<input class="inputStyle" name="author" value="{{globalAuthor}}" type="text" bindblur="authorBindblur" id="author" placeholder="请输入开发者姓名，便于交流" />
+			<input name="icon" hidden="true" type="text" value="{{iconUrl}}" />
+			<input name="qrode" hidden="true" type="text" value="{{qrodeUrl}}" />
+			<input name="public_weixin" hidden="true" type="text" value="{{public_weixinUrl}}" />
+		</view>
+		<button class="button" type='warn' form-type="submit">立即发布小游戏</button>
+	</form>
+</view>

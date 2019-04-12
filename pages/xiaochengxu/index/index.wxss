@@ -49,6 +49,8 @@
 	margin-bottom: 40rpx;
 	font-weight: 300;
 	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+.nav{
 	padding-bottom: 40rpx;
 }
 .juzi-item .top{

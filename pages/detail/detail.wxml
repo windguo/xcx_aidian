@@ -10,6 +10,17 @@
 				<view class="onclick">{{detailData.onclick}}人已访问过</view>
 			</view>
 		</view>
+		<view style="{{detailData.preimgs == '' ? 'display:none' : ''}}">
+			<view class='swiper'>
+				<swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" duration="{{duration}}" interval='{{interval}}' bindchange="bindchange"  circular="{{circular}}" style="height:{{imgheights[current]}}rpx;">
+				<block wx:for='{{detailData.preimgs}}' wx:key="{{index}}">
+					<swiper-item>
+						<image src="{{item.url}}" data-id='{{index}}' class="slide-image" mode="widthFix" bindload="imageLoad"/>
+					</swiper-item>
+					</block>
+				</swiper>
+			</view>
+		</view>
 		<view class="contents">
 			<view class="co">
 				{{detailData.intro}}

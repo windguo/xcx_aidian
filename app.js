@@ -22,6 +22,20 @@ App({
     logined: false,
     sessionkey:'',
     access_token:'',
-    userid:null
+    userid:null,
+		xqimgList:[],
+		globalXiaochengxuClassIndex:0,
+		globalXiaoyouxiClassIndex: 0,
+		globalTitle:'',
+		globalWeixin: '',
+		globalAuthor: '',
+		globalIntro: '',
+		globalIconUrl:'',
+		globalQrodeUrl:'',
+		globalPublicWeixinUrl:'',
+		publish_img_urls:[],
+		reGlobalIconUrl: '',
+		reGlobalQrodeUrl:'',
+		reGlobalPublicWeixinUrl: ''
   }
 })

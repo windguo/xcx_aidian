@@ -36,7 +36,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 4,
+			"current": 2,
 			"list": [
 				{
 					"id": 0,
@@ -55,7 +55,7 @@
 					"id": 2,
 					"name": "详情页",
 					"pathName": "pages/detail/detail",
-					"query": "id=1&classid=26",
+					"query": "id=220&classid=26",
 					"scene": null
 				},
 				{
@@ -67,8 +67,8 @@
 				},
 				{
 					"id": 4,
-					"name": "发布小程序",
-					"pathName": "pages/publish/index",
+					"name": "发布小程序-小程序",
+					"pathName": "pages/publish/xiaochengxu/index",
 					"query": "",
 					"scene": null
 				},
@@ -77,6 +77,13 @@
 					"name": "userid=2",
 					"pathName": "pages/user_list/index",
 					"query": "userid=2",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "发布小游戏",
+					"pathName": "pages/publish/xiaoyouxi/index",
+					"query": "",
 					"scene": null
 				}
 			]

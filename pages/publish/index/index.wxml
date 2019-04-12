@@ -1,0 +1,17 @@
+<header navbar-data='{{navbarData}}'></header>
+<view style="height:{{CustomBar}}px;"></view>
+
+<view class="container">
+	<view class="top">
+		<h1>欢迎来【爱店】提交您的小程序/小游戏</h1>
+		<text class="info">爱上小程序商店简称爱店,是一个分享各类优质小程序的平台。</text>
+	</view>
+	<view class="button">
+		<navigator url="../xiaochengxu/index">
+			<button type='warn'>我要发布小程序</button>
+		</navigator>
+		<navigator url="../xiaoyouxi/index">
+			<button type='warn'>我要发布小游戏</button>
+		</navigator>
+	</view>
+</view>

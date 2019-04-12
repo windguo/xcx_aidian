@@ -4,7 +4,7 @@ var app = getApp()
 Page({
   onShareAppMessage: function (res) {
 		return {
-			title: '爱店(爱小程序商店)汇集大量小程序,欢迎光临',
+			title: '爱店(爱小程序商店)汇集大量微信小程序和小游戏,欢迎光临',
 			path: '/pages/index/index',
 			success: (res) => {
 				wx.showToast({
@@ -72,7 +72,7 @@ Page({
   getNewData: function () {
     let that = this;
     wx.request({
-      url: 'https://www.yishuzi.com.cn/shop_xiaochengxu_api/?getJson=column&classid=9999&pageSize=8',
+      url: 'https://www.yishuzi.com.cn/shop_xiaochengxu_api/?getJson=column&classid=9999&pageSize=12',
       method: 'GET',
       dataType: 'json',
       success: (json) => {

@@ -16,16 +16,16 @@
 					<text class="r icon icon-right"></text>
 				</view>
 		</navigator>
-		<navigator url="../../publish/index" hover-class="navigator-hover">
+		<navigator url="../../publish/index/index" hover-class="navigator-hover">
 				<view class="flex">
 					<view class="it">
 						<text class="icon icon-edit"></text>
-						发布小程序
+						我要发布作品
 					</view>
 					<text class="r icon icon-right"></text>
 				</view>
 		</navigator>
-		<navigator url="../publish/publish" hover-class="navigator-hover">
+		<!-- <navigator url="../publish/publish" hover-class="navigator-hover">
 				<view class="flex">
 					<view class="it">
 						<text class="icon icon-profile_light"></text>
@@ -33,7 +33,7 @@
 					</view>
 					<text class="r icon icon-right"></text>
 				</view>
-		</navigator>
+		</navigator> -->
 		<view class="flex" bindtap='copyTBL' data-text="fengzhang201909">
 			<view class="it">
 				<text class="icon icon-info"></text>

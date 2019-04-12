@@ -1,3 +1,11 @@
+.swiper{
+	margin:40rpx;
+}
+.swiper image {
+  width: 100%;
+  height: auto;
+}
+
 .show_content .hd{
 	display: flex;
 	margin:40rpx;

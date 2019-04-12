@@ -1,0 +1,17 @@
+.top{
+	margin:80rpx 40rpx;
+}
+.top h1{
+	display: block;
+	text-align: center;
+	margin-bottom:40rpx;
+}
+.top .info{
+	font-weight: 300;
+}
+.button{
+	margin:60rpx;
+}
+.button button{
+	margin-bottom: 60rpx;
+}

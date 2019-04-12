@@ -2,9 +2,7 @@ var app = getApp()
 Page({
   onShareAppMessage: function (res) {
 		return {
-			title: '爱小程序商店欢迎您...',
-			imageUrl:'/images/indexPic.jpg',
-			path: '/pages/index/index',
+			title: '爱店(爱小程序商店)汇集大量微信小游戏,欢迎光临',
 			success: (res) => {
 				wx.showToast({
 					content: '分享成功'
@@ -18,14 +16,6 @@ Page({
 		}
   },
 	data: {
-		navbarData: {
-			title: "爱店",
-			showCapsule: false
-		},
-		textData: {
-			title: '我是首页的tips',
-			icon: 'warn_light'
-		},
 		nodata:true,
 		page: 1,
 		height: app.globalData.height * 2 + 25,
@@ -35,7 +25,7 @@ Page({
     index: null,
 		hidden: true,
     winHeight: '', // 窗口高度
-    currentTab: 0, // 预设当前项的值
+    currentTab: 9, // 预设当前项的值
     scrollLeft: 0, // tab标题的滚动条位置
     expertListi: [],
     expertList: [],
