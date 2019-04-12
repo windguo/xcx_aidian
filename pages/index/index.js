@@ -34,7 +34,7 @@ Page({
 		CustomBar: app.globalData.CustomBar,
     titleTop: app.globalData.StatusBar,
     index: null,
-		hidden: true,
+		hidden: false,
     winHeight: '', // 窗口高度
     currentTab: 0, // 预设当前项的值
     scrollLeft: 0, // tab标题的滚动条位置
