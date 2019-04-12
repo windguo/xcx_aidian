@@ -58,7 +58,7 @@ Component({
      */
 		'disable_ratio': {
 			type: Boolean,
-			value: false
+			value: true
 		},
     /**
      * 生成的图片尺寸相对剪裁框的比例

@@ -71,6 +71,7 @@
 	padding:30rpx;
 	border-top:1px solid #f8f8f8;
 	font-weight: 300;
+	text-align: center;
 }
 
 .inputStyle{
@@ -141,7 +142,7 @@
 }
 .container .imgview .no-img {
 	width:190rpx;
-	height:190rpx;
+	height:316rpx;
   margin-right: 10rpx;
 }
 .container .imgview .sel-img {

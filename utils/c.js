@@ -78,7 +78,7 @@ function uploadimg(data) {
 						wx.hideLoading();
 						if (json.data.status == 1) {
 							wx.showModal({
-								content: json.data.message + ',点击【确定】进入我发布的头像(审核后即可展示)，点击【取消】返回首页',
+								content: json.data.message + ',点击【确定】继续发布，点击【取消】返回首页',
 								confirmColor: '#ff5a00',
 								success: function (res) {
 									console.log('res----',res);

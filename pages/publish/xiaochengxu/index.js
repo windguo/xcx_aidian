@@ -2,6 +2,21 @@ var COMMONFN = require('../../../utils/util.js');
 var uploadPicture = require('../../../utils/c.js');
 var app = getApp();
 Page({
+	onShareAppMessage: function (res) {
+		return {
+			title: '爱店(爱小程序商店)邀请您来发布您的微信小程序,让更多人看到哦',
+			success: (res) => {
+				wx.showToast({
+					content: '分享成功'
+				})
+			},
+			fail: (res) => {
+				wx.showToast({
+					content: '分享失败,原因是' + res
+				})
+			}
+		}
+	},
 	data: {
 		height: app.globalData.height * 2 + 25,
 		StatusBar: app.globalData.StatusBar,
@@ -222,10 +237,14 @@ Page({
 				content: '请输入小程序名称',
 				showCancel: false,
 				confirmColor: '#ff5a00'
-			})
-			setTimeout(function () {
-				wx.hideToast()
-			}, 2000);
+			});
+			return false;
+		} else if (this.data.picsItems.length == 0){
+			wx.showModal({
+				content: '请添加屏幕截图',
+				showCancel: false,
+				confirmColor: '#ff5a00'
+			});
 			return false;
 		}else{
 			wx.showLoading({

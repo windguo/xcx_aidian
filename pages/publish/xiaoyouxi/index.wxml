@@ -35,7 +35,7 @@
 						<text class="te" data-item="{{item}}" bindtap="delItem">删除</text>
 					</view>
 				</block>
-				<image hidden='{{isMaxImagesNum}}' class="no-img" catchtap="chooseImageTap" src="/images/file.png"></image>
+				<image hidden='{{isMaxImagesNum}}' class="no-img" catchtap="chooseImageTap" src="/images/bfile.png"></image>
 			</view>
 			<view class="textareas">
 				<textarea class="textarea" value='{{globalIntro}}' bindblur="introBindblur" show-confirm-bar="true" maxlength="200" adjust-position="true" formSubmit="formSubmit" name="intro" placeholder="请输入小游戏介绍,限制200字内" />
